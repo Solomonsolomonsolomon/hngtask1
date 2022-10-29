@@ -5,7 +5,7 @@ const http=require('http')
     slackUsername:"Solomonsolomonsolomon",
     backend:true,
     age:19,
-    bio:'my name is solomon and i am a backend developer who enjoys building tools with javascript..'
+    bio:'my name is solomon and i am a backend developer who enjoys building things with javascript..'
    }
     res.end(JSON.stringify(json))
 }).listen(port,(err)=>{
