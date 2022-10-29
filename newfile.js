@@ -1,14 +1,15 @@
+const app=require('express')();
 const port=process.env.PORT || 2300;
-const http=require('http')
-.createServer((req,res)=>{
-   const json={
+app.use(require('cors')());
+app.get('/',(req,res)=>{
+    res.json({
     slackUsername:"Solomonsolomonsolomon",
     backend:true,
     age:19,
-    bio:'my name is solomon and i am a backend developer who enjoys building things with javascript..'
-   }
-    res.end(JSON.stringify(json))
-}).listen(port,(err)=>{
-    if(err)throw err;
-    console.log(`listening on port ${port}`)
-});
+    bio:"my name is solomon and i enjoy building stuff with javascript"
+    })
+})
+.listen(port,(err)=>{
+if(err)throw err;
+console.log(`port:${port} started`)
+})
